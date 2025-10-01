@@ -1,8 +1,7 @@
 streamlit
 torch
 transformers
-nltk
 matplotlib
 seaborn
+numpy
 pandas
-scikit-learn
