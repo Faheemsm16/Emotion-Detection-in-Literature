@@ -11,8 +11,8 @@ import pandas as pd
 from nltk.tokenize import word_tokenize
 
 # Download resources
-nltk.download("punkt")
-nltk.download("stopwords")
+nltk.download("punkt", quiet=True)
+nltk.download("stopwords", quiet=True)
 
 # Load model once
 @st.cache_resource
