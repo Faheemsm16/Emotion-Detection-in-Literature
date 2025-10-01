@@ -6,5 +6,3 @@ matplotlib
 seaborn
 pandas
 scikit-learn
-beautifulsoup4
-requests
