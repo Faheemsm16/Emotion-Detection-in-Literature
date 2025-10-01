@@ -1,7 +1,8 @@
 streamlit
-transformers
 torch
+transformers
 nltk
-seaborn
 matplotlib
+seaborn
 pandas
+scikit-learn
