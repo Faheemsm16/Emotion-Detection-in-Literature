@@ -11,12 +11,14 @@ from collections import defaultdict
 import pandas as pd
 from nltk.tokenize import word_tokenize
 
-# Set NLTK data path to a writable directory
+# Create a local nltk_data folder
 nltk_data_dir = os.path.join(os.getcwd(), "nltk_data")
 os.makedirs(nltk_data_dir, exist_ok=True)
+
+# Append the local folder to NLTK search path
 nltk.data.path.append(nltk_data_dir)
 
-# Download necessary NLTK resources
+# Download necessary resources to local folder
 nltk.download("punkt", download_dir=nltk_data_dir, quiet=True)
 nltk.download("stopwords", download_dir=nltk_data_dir, quiet=True)
 
