@@ -5,14 +5,20 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import nltk
+import os
 from nltk.corpus import stopwords
 from collections import defaultdict
 import pandas as pd
 from nltk.tokenize import word_tokenize
 
-# Download resources
-nltk.download("punkt", quiet=True)
-nltk.download("stopwords", quiet=True)
+# Set NLTK data path to a writable directory
+nltk_data_dir = os.path.join(os.getcwd(), "nltk_data")
+os.makedirs(nltk_data_dir, exist_ok=True)
+nltk.data.path.append(nltk_data_dir)
+
+# Download necessary NLTK resources
+nltk.download("punkt", download_dir=nltk_data_dir, quiet=True)
+nltk.download("stopwords", download_dir=nltk_data_dir, quiet=True)
 
 # Load model once
 @st.cache_resource
